@@ -6,7 +6,7 @@
         저장되었습니다
       </div>
     </div>
-    <!-- <img src="~/assets/images/intro-logo.png" /> -->
+    <img src="~/assets/images/Main.jpg" class="MainImg" />
   </div>
 </template>
 
@@ -31,6 +31,12 @@ export default {
   border-radius: 0.5rem;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
   position: relative;
+}
+
+.MainImg {
+  width: 100%;
+  height: 100%;
+  margin-right: auto;
 }
 
 .data-save {

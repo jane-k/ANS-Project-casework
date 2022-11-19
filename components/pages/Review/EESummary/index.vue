@@ -68,8 +68,9 @@ export default {
         for (let t = 0; t < YEAR; t++) {
           N_Flight[t] =
             N_Flight[t] +
-            this.ANSDataTemplate.N_DD_Flght.value[l][t] +
-            this.ANSDataTemplate.N_AD_Flght.value[l][t] +
+            (this.ANSDataTemplate.N_DD_Flght.value[l][t] +
+              this.ANSDataTemplate.N_AD_Flght.value[l][t]) /
+              2 +
             this.ANSDataTemplate.N_AI_Flght.value[l][t] +
             this.ANSDataTemplate.N_DI_Flght.value[l][t];
         }
