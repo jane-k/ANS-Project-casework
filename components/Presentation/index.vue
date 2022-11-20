@@ -5,13 +5,15 @@
         {{ dataTypeheaderText }} ({{ dataCountHeaderText }})
       </h2>
       <div class="data-reset">데이터 초기화</div>
-      <div class="data-save">데이터 저장</div>
+      <div class="data-save" @click="handleRoute('/data')">데이터 저장</div>
     </div>
     <!-- TODO: ANSDatabase 업로드 로직 작성 -->
-    <ul class="presentation-list">
+    <UploadData v-if="!ANSDatabase" />
+    <ul v-else class="presentation-list">
       <PresentationItem
         :key="data.variable"
-        v-for="data in filteredANSData"
+        v-for="data in this.filteredANSData"
+        :type="data.type"
         :label="data.label"
         :variable="data.variable"
         :value="data.value"

@@ -1,10 +1,7 @@
 <template>
   <div class="intro-container">
     <div class="data-save">
-      <div v-if="isSaveComplete">
-        "경제성 분석 결과(개별사업).xlsx"로 종합 기대효과 분석결과가
-        저장되었습니다
-      </div>
+      
     </div>
     <img src="~/assets/images/Main.jpg" class="MainImg" />
   </div>
